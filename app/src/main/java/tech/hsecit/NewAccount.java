@@ -7,19 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class NewAccount extends AppCompatActivity {
 
-    Button new_account;
+    Button entr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        new_account = findViewById(R.id.new_compte);
+        setContentView(R.layout.activity_new_account);
+        entr = findViewById(R.id.entrepriseBtn);
 
-        new_account.setOnClickListener(new View.OnClickListener() {
+        entr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,NewAccount.class);
+                Intent intent = new Intent(NewAccount.this,Enterprise.class);
                 startActivity(intent);
             }
         });
